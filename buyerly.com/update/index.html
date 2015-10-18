@@ -20,13 +20,13 @@
 <meta name="dcterms.identifier" content="index.html" />
 <meta name="dcterms.date" content="2013-08-14T12:36-07:00" />
 <meta name="dcterms.title" content="About Us" />
-<meta name="description" content=" " />
+<meta name="description" content=" " />
 <meta name="dcterms.language" content="und" />
 <meta name="dcterms.creator" content="Buyerly Admin" />
 <meta property="twitter:card" content="summary" />
-<meta property="og:description" content=" " />
+<meta property="og:description" content=" " />
 <meta property="og:title" content="About Us" />
-<meta property="twitter:description" content=" " />
+<meta property="twitter:description" content=" " />
 <meta charset="utf-8">
   <title>About Us | Buyerly</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,14 +39,12 @@
 <style type="text/css" media="all">
 <!--/*--><![CDATA[/*><!--*/
 #question_list{height:113px;overflow-y:scroll;overflow-x:hidden;border:solid 1px #CCC;margin:5px;padding:5px;}.ajaxloader{background:url(../sites/all/themes/buyerly/images/throbber/index.gif) 15px 25px;padding:6px;}
-
 /*]]>*/-->
 </style>
 <link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_uBBmJnyUZNdWfeNrqX1E0tA_Aq1-EMHAlwPa_S2Ihyo/index.css" media="all" />
 <style type="text/css" media="all">
 <!--/*--><![CDATA[/*><!--*/
 .views-table tr td,.views-table tr th{border:solid 1px #2C2C2C;}.view-buyer-idea-dashboard table tr td img{max-width:50% !important;}
-
 /*]]>*/-->
 </style>
 <link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_Zp7ZYqEiuVtu_WFV-WyZNzIyZTyrGEM8-gls9Ag71zI/index.css" media="all" />
@@ -64,7 +62,6 @@ jQuery(document).ready(function(){
               if ( field_existing_product  != "_none") {              
                 	     
                     if(formid == "closet_idea_node_form" && ""  != "view"){
-
                             if(currentstep == "Step 2"){
                                    var variables = "existing_product_list_step=0";
                                           jQuery.ajax({
@@ -74,7 +71,6 @@ jQuery(document).ready(function(){
                                                 data: variables,
                                                 success: function(data){
                                                       
-
                                                         // Step - 2
                                                         jQuery("#edit-field-problem-trying-to-solve-und-0-value").val(data.problem_trying_to_solve);
                                                         jQuery("#edit-field-how-the-product-solves-the-und-0-value").val(data.product_solves_the);
@@ -83,25 +79,16 @@ jQuery(document).ready(function(){
                                                         jQuery("#edit-field-suggested-retail-price-und-0-value").val(data.suggested_retail_price);
                           jQuery("#edit-field-similar-products-or-compet-und-0-value").val(data.similar_products_or_compet);
                                                         jQuery("select.field_product_category_sel").html(data.select_list);
-
                                                         var tidvalues = data.tid;
                                                         var tidvaluesArray = tidvalues.split(",");
-
                                                         jQuery.each(tidvaluesArray, function(index, value) {
                           if(value !==""){
                              jQuery("select.field_product_category_unsel option[value="+value+"]").remove();
                           }
-
                                                         });
-
-
                                                 }
                                         });
-
-
-
                             }else{
-
                                    jQuery("#edit-field-existing-product-und").live("change",function(){
                                           var val = jQuery(this).val();
                                          var loader_id = "#edit-field-existing-product .form-item-field-existing-product-und";
@@ -114,7 +101,6 @@ jQuery(document).ready(function(){
                                                        data: variables,
                                                        success: function(data){
                          if(val != "_none"){
-
                             jQuery("#edit-title").val(data.title);
                             jQuery("#edit-field-closet-brand-und-0-value").val(data.brand);
                             jQuery("#edit-field-closet-product-und-0-value").val(data.product);
@@ -124,7 +110,6 @@ jQuery(document).ready(function(){
                            }
                                                        }
                                                });
-
                                           return false;    
                                    });
                   }
@@ -139,7 +124,6 @@ jQuery(document).ready(function(){
 <script type="text/javascript" src="../sites/default/files/js/js_YKYfrvLPWMQDygGtfgPNLG_IkZqf_jxUI55wtttlu0E/index.js"></script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -159,7 +143,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -179,7 +162,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -199,7 +181,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -219,7 +200,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -239,7 +219,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -259,7 +238,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -280,7 +258,6 @@ jQuery(document).ready(function(){
 <script type="text/javascript" src="../sites/default/files/js/js_7qeIP5x1pp65EYN9l3ZhemvVP_ivW4oh0RbOXRf7TX4/index.js"></script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -300,7 +277,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -320,7 +296,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -340,7 +315,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -360,7 +334,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -380,7 +353,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -400,7 +372,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -420,7 +391,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -440,7 +410,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -460,7 +429,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -480,7 +448,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -500,7 +467,6 @@ jQuery(document).ready(function(){
 </script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-
 		jQuery(function(){
 		var hash = window.location.hash;
 		if(hash == "#tab2") {
@@ -541,14 +507,12 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 <link rel="shortcut icon" href="../assets/ico/favicon/index.html">
 </head>
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
-    ﻿<!-- Top Bg ================================================== -->
-
-   
-      <div class="mid-bg buyerlysignup"> 
-            
-      <div class="top-bg2">
-        <div class="container"><div class="Sign-up">
-                            <a href="../signup/index.html"><img src="../sites/all/themes/buyerly/img/sign-up-arrow-l/index.png"><span>Sign up for a free account</span><img src="../sites/all/themes/buyerly/img/sign-up-arrow-r/index.png"></a></div>
+<!-- Top Bg ================================================== -->
+<div class="mid-bg">
+    <div class="top-bg2">
+        <div class="container">
+            <div class="Sign-up">
+                                    <a href="../update/index.html"><img src="../sites/all/themes/buyerly/img/sign-up-arrow-l/index.png"><span>BUYERLY CLOSURE UPDATE</span><img src="../sites/all/themes/buyerly/img/sign-up-arrow-r/index.png"></a></div>
         </div>
         <!-- Navbar================================================== -->
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -556,11 +520,6 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
             <div class="container">
               <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
               <div class="nav-collapse collapse">
-                <ul id="firstpane" class="nav"><li class="menu-2953 "><a href="../index/index.html" class="">Home</a></li>
-<li class="menu-2954 "><a href="../how-buyerly-works/index.html" class="">How Buyerly Works</a></li>
-<li class="menu-2955  pricing"><a href="../pricing/index.html" class="">Pricing</a></li>
-<li class="menu-2956  pricing login-link"><a href="../user/login/index.html" class="">login</a></li>
-</ul>    
               </div>
               <div class="logo">
 
@@ -585,7 +544,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 
   
                   </div>
-                  <h1 class="inner-head">About Us</h1>
+                  <h1 class="inner-head">Buyerly Closure Update</h1>
                 </div>
                 <div style="background-color:#FFF;" class="usermenu" id="buyer_menu_id">
 
@@ -600,21 +559,15 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
     <div class="region region-content">
     <li>
   <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div class="inner-contant">
-	<div class="about-main-img"><img alt="about-main-img" src="../sites/all/themes/buyerly/img/about-main-img/index.png"></div>
-	<div class="about-img"><img alt="about-img" src="../sites/all/themes/buyerly/img/about-img/index.png"></div>
-	<div class="clear">&nbsp;</div>
 	<div class="connectsText" style="display:block;">
-		<p>Buyerly was born on the premise that all companies, regardless of size or budget, should be able to have a dialogue with the nation’s influential retailers.&nbsp; Before today, open communication with retail buyers and the ability to get product feedback was a privilege available only to big brand and big-budget manufacturers.</p>
-		<p>The ability to get feedback on product positioning, packaging, retail and wholesale prices before launching in new retail markets can mean the difference between a buyer’s “yes” or “no”.&nbsp; With 
-		<a href="../how-buyerly-works/index.html"><STRONG>Buyerly’s Product Feedback</STRONG></a>, your company can submit its product for review to avoid last minute changes and build a convincing first impression with retail buyers.&nbsp; With <a href="../how-buyerly-works/index.html"><STRONG>Buyerly’s Product Closet</STRONG></a>, your product will be on display and searchable by retail buyers across America to make connections and to help facilitate future wholesale orders.</p>
-		<p>Buyerly co-founder and former Target Retail Buyer, Vanessa Ting, has built a private network of nationwide retail buyers and decision makers.</p>
-		<p>Buyerly can help your product company – whether at a start-up stage or already in market – to optimize the product you take to retailers and help expand your retail distribution! Launching products that meet retailer’s needs does not have to be limited to a chosen few.</p>
-		<p>Launch your product with confidence, improve your retail launch success, and watch your product sales grow!</p>
+		<p>After 3+ years of building a tech startup, winning awards, customer praise and proving our concept, we have decided it is time to close Buyerly. We would like to thank all our loyal customers for their contributions and feedback.  Without you, we couldn't have made it as far as we did, and we are truly grateful for and inspired by all you inventors, product managers, and buyers out there.</p>
+		<p>One chapter closes, another one begins. But one thing remains the same -- our love of entrepreneurship. </p>
+		<p>Thanks again for the amazing journey!</p>
+		<p>Cheers,</p>
+
 	</div>
 	<div class="inner-contant meet-teem">
 		<div class="meet-teem-line">
-			<div class="meet-icon-team"><img src="../sites/all/themes/buyerly/img/meet-icon/index.png"></div>
-			<h1 class="inner-head meet-head">meet the team</h1>
 			<div class="meet-team-main">
 				<div class="meet-team-wrapp">
 					<div class="meet-teamL">
@@ -626,8 +579,6 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 					</div>
 					<div class="meet-teamR">
 						<h3>Vanessa Ting <span>Chief Buyer &amp; Co-Founder at Buyerly</span></h3>
-						<p>Vanessa is a product junkie and black-belt shopper, which served her well in her career as a product developer, brand marketer and retail buyer for some of the nation's most well-known companies. &nbsp;After years consulting with small brands to build their retail growth strategies, Vanessa identified the need for a broader communication channel between product companies and retail buyers. &nbsp;After testing this idea with clients and retail buyers and refining it to meet their needs, Buyerly was born.</p>
-						<p><i>"Since 2010, I have been coaching companies on how to succeed in the retail space. In this time, I have seen businesses flourish after implementing insights that come directly from retail buyers. I realized then that this knowledge should be available to all companies not just the ones who could afford my consulting services."</i></p>
 						<div class="emailaddress">
 							<div class="emailaddressDiv"><a href="mailto:Vanessa@buyerly.com">Vanessa@buyerly.com</a></div>
 							<a class="fb-icon" href="http://www.facebook.com/vjting"><img src="../sites/all/themes/buyerly/img/fb-icon/index.png"></a> <a class="fb-icon" href="http://www.linkedin.com/in/vanessating"><img src="../sites/all/themes/buyerly/img/in-icon/index.png"></a> <a class="fb-icon" href="http://www.twitter.com/retailpath"><img src="../sites/all/themes/buyerly/img/tw-icon/index.png"></a>
@@ -646,8 +597,6 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 					</div>
 					<div class="meet-teamR">
 						<h3>Dave Liu&nbsp;<span>CTO &amp; Co-Founder at Buyerly</span></h3>
-						<p>Dave has a passion for technology (aka is a geek), and has a background in areas ranging from engineering and mobile technologies to media/entertainment and technology consulting for large enterprises. &nbsp;He became a certified geek after obtaining his bachelor's degree in Computer Engineering from the University of Michigan.</p>
-						<p><i>"Today everyone is focused on getting whatever they want on-demand. &nbsp;From TV shows on Netflix to random blogs and articles on Google. That's why we created Buyerly, to bring that on-demand experience into the retail consulting space. &nbsp;There are a lot of people out there with good ideas that just need the opportunity to get those ideas in front of the folks that matter. The benefit of internet and mobile technologies is that we can easily connect you to those professionals across any industry anywhere in the world."</i></p>
 						<div class="emailaddress">
 							<div class="emailaddressDiv"><a href="mailto:Dave@buyerly.com">Dave@buyerly.com</a></div>
 							<a class="fb-icon" href="http://www.facebook.com/liucid"><img src="../sites/all/themes/buyerly/img/fb-icon/index.png"></a> <a class="fb-icon" href="http://www.linkedin.com/in/davidcliu"><img src="../sites/all/themes/buyerly/img/in-icon/index.png"></a> <a class="fb-icon" href="http://www.twitter.com/dliunatic"><img src="../sites/all/themes/buyerly/img/tw-icon/index.png"></a>
@@ -681,29 +630,6 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
       <footer class="footer">
         <div class="container">
           <div class="row">
-            <div class="span4">
-              <div class="follow">
-                <h1>follow us:</h1>
-<ul id="firstpane" class=""><li class="menu-2959 buyerly_main_header_links_li"><a href="http://www.facebook.com/buyerly" class="menu-2959 buyerly_main_header_links_li">Facebook</a></li>
-<li class="menu-2960 buyerly_main_header_links_li"><a href="http://www.youtube.com/channel/UC6tkbp99mpGqRpNGQWiH_kw" class="menu-2960 buyerly_main_header_links_li">Youtube</a></li>
-<li class="menu-2961 buyerly_main_header_links_li "><a href="http://www.twitter.com/buyerly" class="menu-2961 buyerly_main_header_links_li ">Twitter</a></li>
-<li class="menu-2962 buyerly_main_header_links_li"><a href="http://www.linkedin.com/company/buyerly" class="menu-2962 buyerly_main_header_links_li">LinkedIn</a></li>
-<li class="menu-2963 buyerly_main_header_links_li "><a href="https://plus.google.com/103608010325037207338" class="menu-2963 buyerly_main_header_links_li ">Google +</a></li>
-</ul>   
-
-              </div>
-            </div>
-            <div class="span4">
-              <div class="follow navigation newsletter">
-                <h1>navigation:</h1>
-<ul class="links"><li class="menu-2965 first"><a href="http://buyerly.wordpress.com/" title="">Blog</a></li>
-<li class="menu-2966"><a href="../contact/index.html" title="">Contact Us</a></li>
-<li class="menu-2967 active-trail active"><a href="index.html" title="" class="active-trail active">About Us</a></li>
-<li class="menu-2968"><a href="../terms-conditions/index.html" title="">Terms &amp; Conditions</a></li>
-<li class="menu-2969"><a href="../faq/index.html" title="faq-categories-inline-new-page">FAQ/Help</a></li>
-<li class="menu-2970 last"><a href="../privacy-policy/index.html" title="">Privacy policy</a></li>
-</ul>              </div>
-            </div>
        
   <div class="region region-footer-text">
     <li>
@@ -741,7 +667,6 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
                 
         $("#edit-field-payment-und").append("<div id=\"new_creaditCard\" style=\"\">"+$("#creadit_card").html()+"</div>");
         $("#creadit_card").remove();
-
       });
              
             
@@ -770,10 +695,8 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
           FB.Event.subscribe('auth.logout', function(response) {
             window.location.reload();
           });
-
           jQuery(document).trigger('fb:init');
         };
-
         (function() {
           var e = document.createElement('script');
           e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
