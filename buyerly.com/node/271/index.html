@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from buyerly.com/node/271 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Oct 2015 19:38:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="dcterms.format" content="text/html" />
+<meta name="dcterms.type" content="Text" />
+<link rel="canonical" href="../../terms-conditions/index.html" />
+<meta property="og:type" content="article" />
+<link rel="shortlink" href="index.html" />
+<meta property="og:site_name" content="Buyerly" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon/index.png" type="image/png" />
+<meta property="twitter:url" content="../../terms-conditions/index.html" />
+<meta property="og:url" content="../../terms-conditions/index.html" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<meta property="twitter:title" content="Terms &amp; Conditions" />
+<meta name="dcterms.identifier" content="../../terms-conditions/index.html" />
+<meta name="dcterms.date" content="2013-08-14T12:32-07:00" />
+<meta name="dcterms.title" content="Terms &amp; Conditions" />
+<meta name="description" content="Buyerly Terms of Service" />
+<meta name="dcterms.language" content="und" />
+<meta name="dcterms.creator" content="Buyerly Admin" />
+<meta property="twitter:card" content="summary" />
+<meta property="og:description" content="Buyerly Terms of Service" />
+<meta property="og:title" content="Terms &amp; Conditions" />
+<meta property="twitter:description" content="Buyerly Terms of Service" />
+<meta charset="utf-8">
+  <title>Terms &amp; Conditions | Buyerly</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Le styles -->
+  <link type="text/css" rel="stylesheet" href="../../sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4/index.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../../sites/default/files/css/css_vZ_wrMQ9Og-YPPxa1q4us3N7DsZMJa-14jShHgRoRNo/index.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../../sites/default/files/css/css_M8gtoiLjZZdrDahDgWkt3Mjdle5-1-ppTzPDL6H5MCg/index.css" media="all" />
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+#question_list{height:113px;overflow-y:scroll;overflow-x:hidden;border:solid 1px #CCC;margin:5px;padding:5px;}.ajaxloader{background:url(../../sites/all/themes/buyerly/images/throbber/index.gif) 15px 25px;padding:6px;}
+
+/*]]>*/-->
+</style>
+<link type="text/css" rel="stylesheet" href="../../sites/default/files/css/css_uBBmJnyUZNdWfeNrqX1E0tA_Aq1-EMHAlwPa_S2Ihyo/index.css" media="all" />
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+.views-table tr td,.views-table tr th{border:solid 1px #2C2C2C;}.view-buyer-idea-dashboard table tr td img{max-width:50% !important;}
+
+/*]]>*/-->
+</style>
+<link type="text/css" rel="stylesheet" href="../../sites/default/files/css/css_Zp7ZYqEiuVtu_WFV-WyZNzIyZTyrGEM8-gls9Ag71zI/index.css" media="all" />
+  <script type="text/javascript" src="../../sites/default/files/js/js_zzcIWOou_jnX0ZWAIA4sb6Xy_p5a8FZNA0GySvuWjPU/index.js"></script>
+<script type="text/javascript" src="../../sites/default/files/js/js_qk0KMAPVLPuGinHyBBza4ClgyqI1FKZHL-2S_1HDdXY/index.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery(document).ready(function(){
+		     
+		     jQuery("#turnkey-credit").hide();
+             var currentstep = jQuery(".step-2 h3").html();
+             var formid = jQuery("input[name=form_id]").val();
+             var field_existing_product = "";
+           
+              if ( field_existing_product  != "_none") {              
+                	     
+                    if(formid == "closet_idea_node_form" && ""  != "view"){
+
+                            if(currentstep == "Step 2"){
+                                   var variables = "existing_product_list_step=0";
+                                          jQuery.ajax({
+                                                type: "POST",
+                                                url: "http://buyerly.com/selected_existing_product_step/ajax",
+                                                dataType: "json",
+                                                data: variables,
+                                                success: function(data){
+                                                      
+
+                                                        // Step - 2
+                                                        jQuery("#edit-field-problem-trying-to-solve-und-0-value").val(data.problem_trying_to_solve);
+                                                        jQuery("#edit-field-how-the-product-solves-the-und-0-value").val(data.product_solves_the);
+                                                        jQuery("#edit-field-product-s-key-features-and-und-0-value").val(data.product_key_features);
+                                                        jQuery("#edit-field-wholesale-cost-und-0-value").val(data.wholesale_cost);
+                                                        jQuery("#edit-field-suggested-retail-price-und-0-value").val(data.suggested_retail_price);
+                          jQuery("#edit-field-similar-products-or-compet-und-0-value").val(data.similar_products_or_compet);
+                                                        jQuery("select.field_product_category_sel").html(data.select_list);
+
+                                                        var tidvalues = data.tid;
+                                                        var tidvaluesArray = tidvalues.split(",");
+
+                                                        jQuery.each(tidvaluesArray, function(index, value) {
+                          if(value !==""){
+                             jQuery("select.field_product_category_unsel option[value="+value+"]").remove();
+                          }
+
+                                                        });
+
+
+                                                }
+                                        });
+
+
+
+                            }else{
+
+                                   jQuery("#edit-field-existing-product-und").live("change",function(){
+                                          var val = jQuery(this).val();
+                                         var loader_id = "#edit-field-existing-product .form-item-field-existing-product-und";
+                        jQuery(loader_id).append("<span class=\"ajaxloader\" style=\"float:left;height:8px;\"> </span>");
+                                                 var variables = "existing_product_list="+val+"chnage=1";
+                                                 jQuery.ajax({
+                                                       type: "POST",
+                                                       url: "http://buyerly.com/selected_existing_product/ajax",
+                                                       dataType: "json",
+                                                       data: variables,
+                                                       success: function(data){
+                         if(val != "_none"){
+
+                            jQuery("#edit-title").val(data.title);
+                            jQuery("#edit-field-closet-brand-und-0-value").val(data.brand);
+                            jQuery("#edit-field-closet-product-und-0-value").val(data.product);
+                            jQuery("#edit-field-ideal-consumer-target-mark-und-0-value").val(data.ideal_consumer_target_mark);
+                            jQuery("#edit-field-product-idea-und-0-value").val(data.product_idea);
+                            jQuery(loader_id).find("span").remove();
+                           }
+                                                       }
+                                               });
+
+                                          return false;    
+                                   });
+                  }
+                }              
+              }
+          
+       }); 
+//--><!]]>
+</script>
+<script type="text/javascript" src="../../sites/default/files/js/js_TGT5DoU4Q78zFiITjOfs1ymAzaOQo8EhrebiOho93ok/index.js"></script>
+<script type="text/javascript" src="http://localhost:8080/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="../../sites/default/files/js/js_YKYfrvLPWMQDygGtfgPNLG_IkZqf_jxUI55wtttlu0E/index.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript" src="../../sites/default/files/js/js_7qeIP5x1pp65EYN9l3ZhemvVP_ivW4oh0RbOXRf7TX4/index.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+		jQuery(function(){
+		var hash = window.location.hash;
+		if(hash == "#tab2") {
+			jQuery(".pricingTab ul li:first-child").removeClass("active"); 
+			jQuery(".pricingTab .tab-content #tab1").removeClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().addClass("active");
+			jQuery(".pricingTab .tab-content #tab2").addClass("active");
+			window.scrollTo(0);
+		} else {
+			jQuery(".pricingTab ul li:first-child").addClass("active");                       jQuery(".pricingTab .tab-content #tab1").addClass("active"); 
+			jQuery(".pricingTab ul li:first-child").next().removeClass("active");			jQuery(".pricingTab .tab-content #tab2").removeClass("active");
+			window.scrollTo(0);
+		}
+		
+});
+//--><!]]>
+</script>
+<script type="text/javascript" src="../../sites/default/files/js/js_oWt4bXmC0xMlavmvgf_trBy6d5H8GtEA7_Vh_c6min4/index.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-29127317-2"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://" : "http://") + "stats.g.doubleclick.net/dc.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"buyerly","theme_token":"0HyldPbVDl3kKYiNAedZDGrh8NU-8zQZntX5aFjPEZ8","js":{"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.5\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/views_slideshow\/js\/views_slideshow.js":1,"misc\/ajax.js":1,"0":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/fbconnect\/fbconnect.js":1,"http:\/\/localhost:8080\/socket.io\/socket.io.js":1,"sites\/all\/modules\/nodejs\/nodejs.js":1,"sites\/all\/modules\/nodejs\/nodejs_ajax\/nodejs_ajax.js":1,"misc\/progress.js":1,"sites\/all\/modules\/panels\/js\/panels.js":1,"1":1,"2":1,"3":1,"4":1,"5":1,"6":1,"7":1,"sites\/all\/libraries\/jquery.cycle\/jquery.cycle.all.js":1,"sites\/all\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/js\/views_slideshow_cycle.js":1,"8":1,"9":1,"10":1,"11":1,"12":1,"13":1,"14":1,"15":1,"16":1,"17":1,"18":1,"19":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"sites\/all\/modules\/jcarousel\/js\/jquery.jcarousel.min.js":1,"sites\/all\/modules\/jcarousel\/js\/jcarousel.js":1,"20":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/views_slideshow\/views_slideshow.css":1,"sites\/all\/modules\/simplenews\/simplenews.css":1,"sites\/all\/modules\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/mforms\/mforms_example\/mforms_example.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"sites\/all\/modules\/stickynote\/css\/stickynote.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"0":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/fbconnect\/fbconnect.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/views_slideshow_cycle.css":1,"sites\/all\/modules\/jcarousel\/skins\/default\/jcarousel-default.css":1,"1":1,"sites\/all\/themes\/buyerly\/assets\/css\/bootstrap.css":1,"sites\/all\/themes\/buyerly\/assets\/css\/bootstrap-responsive.css":1,"sites\/all\/themes\/buyerly\/assets\/css\/docs.css":1,"sites\/all\/themes\/buyerly\/assets\/css\/slider-default.css":1,"sites\/all\/themes\/buyerly\/assets\/css\/nivo-slider.css":1,"sites\/all\/themes\/buyerly\/fonts\/fonts.css":1,"sites\/all\/themes\/buyerly\/assets\/js\/google-code-prettify\/prettify.css":1,"sites\/all\/themes\/buyerly\/css\/style.css":1}},"arg":["node","271"],"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true},"fbconnect":{"user_pictures":"allow","language_code":"en_US","app_id":"562806287086064","debug":0,"connect_js":"document.location.protocol + \u0027\/\/connect.facebook.net\/en_US\/all.js\u0027","loginout_mode":"manual","invite_name":"Buyerly","fast_reg_mode":0,"fast_reg_autoname":0,"fbuid":0,"user":{"uid":0,"fbuid":null}},"jcarousel":{"ajaxPath":"\/jcarousel\/ajax\/views","carousels":{"jcarousel-dom-1":{"view_options":{"view_args":"","view_path":"node\/271","view_base_path":null,"view_display_id":"block","view_name":"as_featured_on_carousel","jcarousel_dom_id":1},"wrap":"both","skin":"default","start":1,"selector":".jcarousel-dom-1"},"jcarousel-dom-2":{"view_options":{"view_args":"","view_path":"node\/271","view_base_path":null,"view_display_id":"block","view_name":"our_retailers_carousel","jcarousel_dom_id":2},"wrap":"both","skin":"default","start":1,"selector":".jcarousel-dom-2"}}},"nodejs":{"scheme":"http","secure":0,"host":"localhost","port":"8080","resource":"\/socket.io","authToken":"959e07044863b8812c6606da44c2a407","websocketSwfLocation":"\/sites\/all\/modules\/nodejs\/socket_io\/socket.io\/support\/socket.io-client\/lib\/vendor\/web-socket-js\/WebSocketMain.swf"},"viewsSlideshow":{"testimonial_slider-block":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0}},"viewsSlideshowCycle":{"#views_slideshow_cycle_main_testimonial_slider-block":{"num_divs":6,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"testimonial_slider-block","effect":"scrollLeft","transition_advanced":1,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":1,"pause":0,"pause_on_click":0,"action_advanced":0,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"fixed_height":1,"items_per_slide":1,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":0,"cleartypenobg":0,"advanced_options":"{}"}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"}});
+//--><!]]>
+</script>
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+<!-- Le fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed/index.html">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed/index.html">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed/index.html">
+<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed/index.html">
+<link rel="shortcut icon" href="../assets/ico/favicon/index.html">
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+    ﻿<!-- Top Bg ================================================== -->
+
+   
+      <div class="mid-bg buyerlysignup"> 
+            
+      <div class="top-bg2">
+        <div class="container"><div class="Sign-up">
+                            <a href="../../signup/index.html"><img src="../../sites/all/themes/buyerly/img/sign-up-arrow-l/index.png"><span>Sign up for a free account</span><img src="../../sites/all/themes/buyerly/img/sign-up-arrow-r/index.png"></a></div>
+        </div>
+        <!-- Navbar================================================== -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container">
+              <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+              <div class="nav-collapse collapse">
+                <ul id="firstpane" class="nav"><li class="menu-2953 "><a href="../../index/index.html" class="">Home</a></li>
+<li class="menu-2954 "><a href="../../how-buyerly-works/index.html" class="">How Buyerly Works</a></li>
+<li class="menu-2955  pricing"><a href="../../pricing/index.html" class="">Pricing</a></li>
+<li class="menu-2956  pricing login-link"><a href="../../user/login/index.html" class="">login</a></li>
+</ul>    
+              </div>
+              <div class="logo">
+
+                  <a class="brand"  href="../../index/index.html" title="Home">
+                    <img src="../../sites/all/themes/buyerly/logo/index.png" alt="Home"/>
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inner">
+        <div class="container">
+                      <div id="wrapper">
+              <div class="inner-main">
+                <div class="inner-top-corner">
+                  <div class="meet-icon-team">
+  
+                      <img src="../../sites/all/themes/buyerly/img/about-icon/index.png">
+
+
+  
+                  </div>
+                  <h1 class="inner-head">Terms &amp; Conditions</h1>
+                </div>
+                <div style="background-color:#FFF;" class="usermenu" id="buyer_menu_id">
+
+                                    </div>
+                <div class="inner-contant">
+                  <div style="background-color:#FFF;" class="usermenu">
+
+                      	
+                  </div>
+                  <div class="inner-wrapp">
+                      
+    <div class="region region-content">
+    <li>
+  <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"> <p align="center"><strong>Buyerly Terms of Service</strong></p>
+<p><strong>PLEASE READ THIS AGREEMENT CAREFULLY; THIS IS A BINDING CONTRACT. </strong>Welcome to the Buyerly.com website (the "<strong>Site</strong>"). This Terms of Service agreement (this "<strong>ToS</strong>") describes the terms and conditions applicable to your access and use of the Site and the services offered through the Site (the "<strong>Services</strong>"). This ToS sets forth the terms and conditions under which Buyerly ("<strong>Buyerly</strong>," “the <strong>Company</strong>,” "<strong>we</strong>" or "<strong>us</strong>"), owned and operated by Buyerly, LLC., provide you access to the Site and the Services.</p>
+<p>Buyerly may amend this ToS at any time by posting the amended ToS on the Site, and you agree that you will be bound by any changes to this ToS by accessing or using the Site or any of the Services after the amended ToS has been posted.</p>
+<p>Your use of the Site and/or the Services signifies that you agree to all of the Terms and Conditions in this ToS. If you are using the Site and/or the Services on behalf of another company, such as your employer or a client, you acknowledge and agree that you have the authority to bind such company to these ToS.</p>
+<p>If You are under the age of 18 your parent or guardian must enter into this agreement on Your behalf. If You are under the age of 18 you affirm that by Your continued or future use Your parent or legal guardian has first agreed to these terms on your behalf.</p>
+<p> </p>
+<p><strong>Commonly Used Terms and their Definitions</strong></p>
+<p><strong>“Product Owner” </strong>means any User that pays to submit a Product Idea to the Site.</p>
+<p><strong>“Buyer”</strong> means any retailer, retail buyer, or person representing the retail channel who creates an account to either provide product feedback or search for Product Ideas.</p>
+<p><strong>“User Accounts”</strong> means any user, Product Owner or Buyer, who creates any account on the Site</p>
+<p><strong>“Product Idea” </strong>means a product concept, design or idea that is submitted by a Product Owner to the Site as a Product Idea.</p>
+<p><strong>“Inventions” </strong>includes ideas, discoveries, inventions, developments and improvements, whether or not reduced to practice and whether or not patentable or otherwise within the definition of Intellectual Property.</p>
+<p><strong>“Proprietary Information” </strong>includes any scientific, technical, trade or business secrets of any person or entity and any scientific, technical, trade or business materials that a person or entity treats, or is obligated to treat, as confidential or proprietary, including, but not limited to, Inventions belonging to a person or entity and confidential information obtained by or given to a person or entity about or belonging to a third party.</p>
+<p><strong>“Site Content” </strong>shall mean all information on the Site and available through the Services, including without limitation designs, text, graphics, pictures, video, animation, information, applications, software, programs, music, sound, audio, schematics, illustrations, diagrams, data, and other files and creative output, in whatever format, and their selection and arrangement.</p>
+<p>“<strong>Product Feedback Submission</strong>” means the transaction of submitting a product idea for review and feedback by buyers.</p>
+<p>“<strong>Product Closet</strong>” shall reference the repository of Product Ideas in which retailers and buyers may search for Product Ideas and request communication with selected Product Owners.</p>
+<p><strong>Eligibility</strong></p>
+<p>The Platform, Services, and Content of Buyerly, is not available to persons under the age of 13 or to any Users (including subscribers, purchasers, or members, as may be applicable) (collectively the “User”) previously suspended or removed from the Site. By accessing, or otherwise using the platform and any of the services and content of Buyerly, You represent that you are at least 13 years of age and have not been previously suspended or removed from the Site.</p>
+<p>If You do not agree with any of these terms, close the Site immediately and do not access or otherwise use the Site or any information contained on or through the Site. Your use of the Site, the services, and the content, of Buyerly shall be deemed to be your agreement to abide and be bound by each of the terms set forth below. You acknowledge that you have read and understood, and agree to be bound by, these terms and conditions.</p>
+<p><strong>1. Requirements</strong></p>
+<p>Before you can use certain aspects of the Services, you must: (a) agree to this ToS, and (b) register for an Account (defined below). You are responsible for any internet connection fees that you incur when accessing the Services.</p>
+<p>1b. <strong>Payments by Users for Market Research Data</strong></p>
+<p>The Site has been created primarily to provide low-cost market research to a Product Owner with respect to Product Ideas. An Product Owner, the party for whom submits an idea for feedback, must pay the advertised fee to submit a product idea to the Buyers. The Site will collect and organize feedback received from the Buyers with respect to each Product Idea and will provide the results to the Product Owner. The Company makes no representations or warranties regarding the volume or quality of any feedback provided and each Product Owner acknowledges and agrees to bear the risk that Buyers may not provide any meaningful feedback with respect to a Product Idea.</p>
+<p><strong>2. Accounts, Fees, and Security</strong></p>
+<p>2.1 <u>Accounts</u>. There are two types of accounts available through the Services (each, an "Account"): (a) "<strong>Buyer Accounts</strong>" which provides a user with buyer-only access to certain aspects of the Site and the Services free of charge; and (b) "<strong>Product Owner Accounts</strong>" which permit access to Product Owner-only features of the Services, such as the ability to upload Content (defined below) to the Services. You must complete the Account registration process by providing current, complete and accurate information. If your contact information changes, you agree to promptly update the Account information to reflect those changes. Upon subscription to either Account, a User Account must be established to access these Accounts.</p>
+<p>2.2 <u>User Accounts</u>. "<strong>User Accounts" </strong>allow a user to access an established Product Owner Account and/or Buyer Account by providing a username and password. Multiple User Accounts may be established for each type. You may create only one (1) User Account. By establishing a User Account, you agree that only one user is permitted access to each User Account and the User Account may not be shared or accessed by others except for internal technical support purposes. Each User Account is permitted access to only a Buyer Account or Product Owner Account. User Accounts established for access to Buyer Accounts are free of charge and have access to all buyer-related Services.</p>
+<p>User Accounts established for access to Product Owner Accounts fall under two categories: (a) "Product Feedback Submission", which allows limited access to certain aspects of Product Submission Feedback-related Services; and (b) "Product Closet Users" which allows full access to all Product-Closet-related Services. A Product Closet User may be converted to a Product Feedback Submission at any time with the purchase of a Product Feedback Submission transaction. For a limited time, a Product Feedback Submission User is automatically a Product Closet User with the purchase of a Product Feedback Submission transaction. This time limitation will change with notice.</p>
+<p>2.4 <u>Term</u>. There is no term limit for Buyer Account subscriptions.  The term for a Product Closet Account with one or more Paid Users may either be one (1) month or three (3) months or six (6) months as specified. This term begins when the first payment is made. There is no term limit for a Product Feedback Submission Account but to use Product Feedback Submission-related services, a transaction fee is required as specified.</p>
+<p>2.5 <u>Fees</u>.</p>
+<p>Certain aspects of the Site, such as submitting a Product Idea for feedback or to the Buyerly Product Closet, may be for a fee or other charge. These fees and charges are described on the Site, and in the event you elect to use paid aspects of the Services, you agree to the pricing, payment and billing policies applicable to such fees and charges, posted on the Site. Buyerly may add new services for additional fees and charges, or proactively amend fees and charges for existing services, at any time in its sole discretion. All fees paid to the Company are solely for services provided by the Company through the Site.</p>
+<p>The initial subscription fee for each Product Closet Account is based on the term of the subscription.  When you submit an order for a subscription in the Product Closet, you agree to pay all fees set forth in the pricing page and all applicable taxes. The transaction fee for each Product Feedback Submission Account is based on the size of the buyer panel.  When you submit an order for the Product Feedback Submission, you agree to pay all fees set forth in the pricing page and all applicable taxes. All payments must be made in US Dollars. If you choose to pay by credit card or debit card, the fees shall be charged to the account you provide us through the billing page.</p>
+<p><strong>YOU ACKNOWLEDGE AND AGREE THAT PAID ACCOUNT FEES ARE NOT REFUNDABLE.</strong></p>
+<p>2.6 <u>Delinquent Payments</u>. Delinquent payments may accrue interest at the rate of 1.5% of the outstanding balance per month (or the maximum rate permitted by law, if less) from the date such payment was due until the date paid. Paid Account holders will be responsible for any costs incurred by Buyerly in collecting delinquent amounts. Buyerly may, without limiting its other rights and remedies, accelerate the payment obligations of a delinquent Paid Account so that such amounts are immediately due and payable, and suspend access to the Product Owner Account until such amounts are paid in full. Any account that has been suspended for a period longer than 30 days are subject to Account Termination as defined in section 2.8.</p>
+<p>2.7 <u>Account Security</u>. You are responsible for maintaining the confidentiality of all of your Account usernames and passwords. You agree to notify Buyerly immediately if you believe that an Account has been compromised. You agree to provide accurate, current and complete information about you as may be prompted by any registration forms on the Site and maintain and promptly update the Registration Data and any other information you provide to Company, and keep it accurate, current and complete.  You agree to be fully responsible for all use of your account and for any actions that take place using your account.</p>
+<p>2.8 <u>Cancellation by You</u>. You may cancel any Account registered to you at any time by following the instructions on the Site.</p>
+<p>2.9 <u>Effect of Account Termination or Cancellation</u>. If you voluntarily terminate an Account or allow that Account to lapse at the end of its term, you may reactivate that Account at any time through the account interface on the Site. Accounts terminated by Buyerly for any type of abuse, including without limitation a violation of this ToS, may not be reactivated. In the event that you cancel a Product Owner Account: (a) you are responsible for the balance of all unpaid fees under that Product Owner Account, which shall become immediately due and payable on the date of cancellation; and (b) Buyerly has no obligation to maintain the Content (defined in Section 4.1) you have uploaded to and created on the Services. All User Accounts associated with the terminated or canceled Account also terminate.</p>
+<p><strong>3. Restrictions and Conditions of Use</strong></p>
+<p>You agree that you will not violate any applicable law or regulation in connection with your use of the Site or the Services. You may not connect to or use the Site and/or the Services in any way not permitted by this ToS. You agree that you will not (a) become involved in any type of attack on the Site or the Services; (b) attempt to gain unauthorized access to the Site, the Services or other Accounts; (c) use any type of malicious software such as bots, spiders, viruses or other codes on the Site or the Services; (d) create derivative works of the Site or the Services; (e) copy, frame or mirror any part of content of the Site without the written consent of Buyerly; (f) access the Services in order to build a competing product or service; (g) attempt to reverse engineer any component of the Services; or (h) sell, resell, lease, or the functional equivalent, the Services to a third party. You may not use the Site or the Services to develop, generate, transmit, post or store information (including, but not limited to Content) that: (i) is defamatory, harmful, abusive, obscene or hateful; (ii) obstructs or otherwise interferes with the normal performance of another person's use of the Site and/or the Services; (iii) constitutes harassment or threatens other people or groups of people; (iv) is harmful to children in any manner; (v) violates any third party rights, including, but not limited to, copyrights, trademarks, trade secrets, patents or the rights of privacy and publicity; or (vi) constitutes phishing, pharming or impersonates any other person, or steals or assumes any person's identity.</p>
+<p><strong>4. Product Owner Account Content</strong></p>
+<p>4.1 <u>Content</u>. "<strong>Content</strong>" means any communications, images, sounds, and all the material and information that is uploaded or transmitted through the Site and/or the Services via a Product Owner Account. In order for us to provide the Services, if you have a Product Owner Account, you permit us to reproduce, distribute, transmit, publicly display and publicly perform Content that you upload or transmit through the Services via your Product Owner Account. You, not Buyerly, determine what Content to upload through the Service and who has access to your Content. Accordingly, you acknowledge that, except as otherwise expressly provided in this ToS, Buyerly has no obligation, whether of confidentiality, or otherwise, with respect to Content that you upload or transmit through the Services and Buyerly will not be liable for any use or disclosure of Content by any user of the Site or the Services that you permit access to your Content. Further, you (and not Buyerly) are responsible for (i) maintaining the confidentiality of any links, passwords or other means you provide to users of the Site for accessing your Content; (ii) notifying all persons to whom you provide any link, password or other means for accessing your Content of the confidential nature of such link, password or other means of access and (iii) any and all use or misuse of your Content by any person to whom you have permitted access to your Content.</p>
+<p>4.2 <u>Access to Content</u>. We do not, and cannot, pre-screen or monitor any Content. We do not assume any responsibility or liability for Content that is uploaded or transmitted by users of the Site and/or the Services. We have the right, but not the obligation, in our sole discretion to edit, refuse to post, or remove any Content. We also reserve the right, at all times and in our sole discretion, to disclose any Content for any reason, including without limitation (a) to satisfy any applicable law, regulation, legal process or governmental request; (b) to enforce any of the terms of this ToS; (c) to protect our legal rights and remedies; (d) where we believe someone's health or safety may be threatened; or (e) to report a crime or other offensive behavior. If you have a Buyer's Account and are provided with a link, password or other means for accessing Content through the Services, you agree to maintain the confidentiality of such link, password or other means of access.</p>
+<p><strong>5. Modification or Termination of the Services</strong></p>
+<p>Buyerly may make changes to the Site and/or the Services at any time. Additionally, Buyerly may stop offering and/or supporting any of the Services at any time, provided, however, that Buyerly will use commercially reasonable efforts to provide you at least thirty (30) days' notice prior to ending the Services. You understand that Buyerly may discontinue or restrict your access to and use of the Site and/or the Services without notice (a) if you have a Buyer's Account or Product Owner’s Account for any reason, or (b) if Buyerly believes you have violated any of terms of this ToS.</p>
+<p><strong>6. Confidentiality</strong></p>
+<p>You acknowledge and agree that all of the features, tools, data, functions, processes, procedures, methods, customer lists, accounts, inventions, innovations, information, records, specifications and other aspects of the Site and the Services (other than Content) that are accessible through a Product Owner or Buyer Account are the confidential information of Buyerly and you agree not to disclose any such information in whole or in part without Buyerly's prior written approval. This obligation shall not apply to information that you can prove is not confidential because such information is: (a) already known to you without an obligation to maintain its confidentiality; (b) publicly known through no wrongful act by you; or (c) rightfully received from a third party without breaching an obligation to maintain its confidentiality.</p>
+<p>If you have a Product Owner Account, Buyerly agrees not to use or disclose to any third party, other than in connection with Buyerly's operation of the Site and/or the Services, any confidential data or information clearly identified as "Confidential" that you transmit through the Services; provided, however, that Buyerly will not have any such obligation with respect to information or data that (i) is or becomes (not through Buyerly's misconduct) publicly available, (ii) you disclose to a third party without such restrictions, (iii)is already known to Buyerly without confidentiality obligations, or (iv) is rightfully received from Buyerly from a third party without confidentiality obligations.</p>
+<p><strong>7. Ownership</strong></p>
+<p>As between you and Buyerly, (a) Buyerly owns the Site and the Services; and (b) if you have registered for a Product Owner Account, you own all Content that you upload or transmit through the Services via your Product Owner Account.</p>
+<p><strong>8. Links and Third Party Services</strong></p>
+<p>The Site may contain services or links to websites operated by others. Buyerly provides these services and links as a convenience and your use of them is at your own risk. Buyerly is not responsible for any of the services provided by third parties or content available on the other websites and disclaims all liability relating to your access to and use of these websites. Please note that the services provided by third parties through the Site or the Services may be subject to terms of service provided by the operators of such services and you should review such terms of service prior to using or participating in such services.</p>
+<p><strong>9. Intellectual Property</strong></p>
+<p>9.1 <u>Trademarks</u>. The Buyerly name and the Buyerly logo are trademarks/service marks of Buyerly. Unauthorized use of any Buyerly trademark, service mark or logo may be a violation of federal and state trademark laws.</p>
+<p>9.2 <u>Copyright</u>. The Site and the Services are protected by U.S. and international copyright laws. Except for your use as authorized above, you may not modify, reproduce or distribute the content, design or layout of the Site, the Services, or individual sections of the content, design or layout of the Site without Buyerly's prior written permission.</p>
+<p><strong>10. Disclaimer of Warranties</strong></p>
+<p>All Services are Provided "as is" Without Express or Implied Warranties.  BUYERLY PROVIDES THE SITE, THE SERVICES, YOUR ACCOUNT AND ALL RELATED SERVICES STRICTLY ON AN "AS IS" BASIS, PROVIDED AND ACCEPTED AT YOUR OWN RISK, AND HEREBY EXPRESSLY DISCLAIMS ALL WARRANTIES OR CONDITIONS OF ANY KIND, WRITTEN OR ORAL, EXPRESS, IMPLIED OR STATUTORY, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTY OF TITLE, NONINFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</p>
+<p>Without limiting the foregoing, the Company does not ensure continuous, error-free, secure or virus-free operation of the Services, the Site or your account, and you understand that you shall not be entitled to make any claim based on Buyerly’s failure to provide any of the foregoing other than as explicitly provided in this Agreement. Some jurisdictions do not allow the disclaimer of implied warranties, and to that extent, the foregoing disclaimer may not apply to you.</p>
+<p><strong>11. Limitation of Liability; SOLE AND EXCLUSIVE REMEDY.</strong></p>
+<p>BUYERLY DISCLAIMS ALL LIABILITY AND ALL LOSSES RELATING TO YOUR USE OF THE SITE AND/OR SERVICES. WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, BUYERLY WILL NOT BE RESPONSIBLE FOR, OR HAVE ANY LIABILITY RESULTING FROM, THE CONDUCT OR MISCONDUCT OF ANY BUYER OR PRODUCT OWNER WITH WHOM YOU INTERACT THROUGH YOUR USE OF THE SERVICES. BUYERLY WILL NOT BE LIABLE UNDER ANY CIRCUMSTANCES FOR ANY INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES OF ANY KIND. IN NO EVENT WILL BUYERLY'S LIABILITY FOR DIRECT DAMAGES EXCEED THE AMOUNT THAT YOU PAID TO US DURING THE SIX (6) MONTHS PRIOR TO THE WHEN YOUR CAUSE OF ACTION AROSE. Some states or jurisdictions do not allow the exclusion or the limitation of liability for consequential or incidental damages and, in such states or jurisdictions; Buyerly's liability shall be limited to the fullest extent permitted by law.</p>
+<p><strong>12. Indemnification</strong></p>
+<p>You agree to indemnify, defend and hold Buyerly harmless from all claims, demands and lawsuits and resulting liabilities, damages and losses, including reasonable attorneys' fees and costs, resulting from or arising out of your use of the Site or any of the Services (including, without limitation, your use of any trademark or brand that infringes another's trademark or other rights) or your breach of this ToS.</p>
+<p><strong>13. General</strong></p>
+<p>You agree that no joint venture, partnership, employment, or agency relationship exists between you and Buyerly. Buyerly may assign any of its rights or obligation under this ToS at any time to any other person or entity without your consent. You may not assign any of your rights or obligations under this ToS without Buyerly's prior written consent, and any unauthorized assignment by you shall be null and void. If any part of this ToS is determined to be invalid or unenforceable, then that portion shall be severed, and the remainder of the ToS shall be given full force and effect. In the event any litigation is brought by either party in connection with this ToS, the prevailing party in such litigation shall be entitled to recover from the other party all the reasonable costs, attorneys' fees and other expenses incurred in the litigation. Our failure to enforce any provision of this ToS shall in no way be construed to be a present or future waiver of such provision. The express waiver by us of any part of this ToS shall not constitute a waiver of any future obligation to comply with that part of the ToS. This ToS shall be governed by and construed in accordance with the laws of the State of California, United States of America without regard to its conflicts of laws principles. Any legal proceeding arising out of or relating to this ToS will be subject to the exclusive jurisdiction of the California State and U.S. federal courts located in Los Angeles County, California and you consent to the personal jurisdiction and venue of such courts. You further agree not to bring any claim on a class action basis. The United Nations Convention on Contracts for the International Sale of Goods is expressly disclaimed. This ToS and all Account subscription pages that you submitted along with any written addendums to this ToS between Buyerly and you, collectively, constitute the entire agreement between you and us with respect to the Site and the Services. In the event of a conflict between the terms of this ToS and any Account subscription pages and/or written addendum to this ToS, the terms of the Account subscription pages and/or the written addendum shall control and prevail.</p>
+<p><strong>14. Media Waiver</strong></p>
+<p>You agree that the Company has the absolute right and permission to use your name, voice, image, likeness, and applicable results achieved from use of the Site, including for example any distribution orders resulting from use of Site, Product Submission Feedback results, and connections with buyers, as well as representations made by you, in any media (including, without limitation, television, print, radio and the Internet), world-wide, for the purposes of advertising, promoting, reporting and disseminating information about the Company, the Company’s business.</p>
+ </div></div></div></li>  </div>
+  
+
+                  </div>
+
+
+
+                </div>
+              </div><div class="inner-bottom-corner"></div>
+            </div>
+                		
+        </div>
+
+      </div>
+      <div class="clear"></div>
+
+      <!-- Footer
+        ================================================== -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="span4">
+              <div class="follow">
+                <h1>follow us:</h1>
+<ul id="firstpane" class=""><li class="menu-2959 buyerly_main_header_links_li"><a href="http://www.facebook.com/buyerly" class="menu-2959 buyerly_main_header_links_li">Facebook</a></li>
+<li class="menu-2960 buyerly_main_header_links_li"><a href="http://www.youtube.com/channel/UC6tkbp99mpGqRpNGQWiH_kw" class="menu-2960 buyerly_main_header_links_li">Youtube</a></li>
+<li class="menu-2961 buyerly_main_header_links_li "><a href="http://www.twitter.com/buyerly" class="menu-2961 buyerly_main_header_links_li ">Twitter</a></li>
+<li class="menu-2962 buyerly_main_header_links_li"><a href="http://www.linkedin.com/company/buyerly" class="menu-2962 buyerly_main_header_links_li">LinkedIn</a></li>
+<li class="menu-2963 buyerly_main_header_links_li "><a href="https://plus.google.com/103608010325037207338" class="menu-2963 buyerly_main_header_links_li ">Google +</a></li>
+</ul>   
+
+              </div>
+            </div>
+            <div class="span4">
+              <div class="follow navigation newsletter">
+                <h1>navigation:</h1>
+<ul class="links"><li class="menu-2965 first"><a href="http://buyerly.wordpress.com/" title="">Blog</a></li>
+<li class="menu-2966"><a href="../../contact/index.html" title="">Contact Us</a></li>
+<li class="menu-2967"><a href="../../about-us/index.html" title="">About Us</a></li>
+<li class="menu-2968 active-trail active"><a href="../../terms-conditions/index.html" title="" class="active-trail active">Terms &amp; Conditions</a></li>
+<li class="menu-2969"><a href="../../faq/index.html" title="faq-categories-inline-new-page">FAQ/Help</a></li>
+<li class="menu-2970 last"><a href="../../privacy-policy/index.html" title="">Privacy policy</a></li>
+</ul>              </div>
+            </div>
+       
+  <div class="region region-footer-text">
+    <li>
+  <div class="Copyright"> Copyright &copy; 2015 <a href="../../index/index.html">buyerly.com</a>. All rights reserved </div></li>  </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Le javascript
+        ================================================== --> 
+    <!-- Placed at the end of the document so the pages load faster --> 
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/jquery/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/bootstrap-transition/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/bootstrap-alert/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/bootstrap-modal/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/bootstrap-dropdown/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/bootstrap-scrollspy/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/bootstrap-tab/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/bootstrap-tooltip/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/bootstrap-popover/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/bootstrap-button/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/bootstrap-collapse/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/bootstrap-carousel/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/bootstrap-typeahead/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/bootstrap-affix/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/holder/holder/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/google-code-prettify/prettify/index.js"></script> 
+    <script src="../../sites/all/themes/buyerly/assets/js/application/index.js"></script> 
+    <script type="text/javascript" src="../../sites/all/themes/buyerly/assets/js/jquery-1.7.1.min/index.js"></script> 
+    <script type="text/javascript" src="../../sites/all/themes/buyerly/assets/js/jquery.nivo.slider/index.js"></script> 
+    <script type="text/javascript">
+      $(window).load(function() {
+        $('#slider').nivoSlider();
+                
+        $("#edit-field-payment-und").append("<div id=\"new_creaditCard\" style=\"\">"+$("#creadit_card").html()+"</div>");
+        $("#creadit_card").remove();
+
+      });
+             
+            
+    </script>
+
+
+
+
+
+
+  <div id="fb-root"></div>
+      <script type="text/javascript">
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId : '562806287086064',
+            cookie : true, // enable cookies to allow the server to access the session
+            xfbml : true,
+            logging: '0',
+            channelURL: 'http://buyerly.com/sites/all/modules/fbconnect/channel.html',
+            oauth  : true
+          });
+          // whenever the user logs in, we tell our login service
+          FB.Event.subscribe('auth.login', function() {
+            window.location.reload();
+          });
+          FB.Event.subscribe('auth.logout', function(response) {
+            window.location.reload();
+          });
+
+          jQuery(document).trigger('fb:init');
+        };
+
+        (function() {
+          var e = document.createElement('script');
+          e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+          e.async = true;
+          document.getElementById('fb-root').appendChild(e);
+        }());
+      </script></body>
+
+<!-- Mirrored from buyerly.com/node/271 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Oct 2015 19:38:38 GMT -->
+</html>
